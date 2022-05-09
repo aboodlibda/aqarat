@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    protected $guarded = [];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function City()
+    {
+        return $this->belongsTo(City::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'product_id');
+    }
+}
