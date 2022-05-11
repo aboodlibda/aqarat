@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="font-family: 'Cairo', sans-serif">
 <head>
     <title>منصة الشواهق العقارية</title>
     <meta charset="utf-8">
@@ -34,7 +34,7 @@
     <script src="{{asset('front/js/jquery-2.1.1.min.js')}}"></script>
     <script src="{{asset('front/js/modernizr.js')}}"></script>
 </head>
-<body class="sticky_menu" style="font-family: 'Cairo', sans-serif">
+<body class="sticky_menu">
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
