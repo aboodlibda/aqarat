@@ -802,7 +802,7 @@
         <section class="container m_bottom_5">
             <div class="d_table m_bottom_5 w_full hidden animated" data-animation="fadeInLeft">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 v_align_m d_table_cell f_none">
-                    <h5 class="second_font color_dark tt_uppercase fw_light d_inline_m m_bottom_4">LATEST BLOG</h5>
+                    <h5 class="second_font color_dark tt_uppercase fw_light d_inline_m m_bottom_4"><h3>بحث سريع في أشهر المدن</h3></h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 t_align_r d_table_cell f_none">
                     <!--carousel navigation-->
@@ -831,155 +831,21 @@
 								}
 							}'>
                     <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="200">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_1.jpg" alt="" class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
+                    @foreach($cities as $city)
+                        <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="200">
+                            <article class="frame_container scale_image_container">
+                                <figure class="relative">
+                                    <a href="#" class="d_block wrapper m_bottom_15"><img src="{{asset('cities-images/'.$city->image)}}" alt="" class="tr_all scale_image" style="object-fit: cover;height: 330px;width: 400px"></a>
+                                            <!--post info (date & comments)-->
+
+                                            <!--post excerpt-->
+                                            <div class="t_align_c post_excerpt ">
+                                                <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>{{$city->name}}</b></a></h5>
                                             </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i> <span class="fs_small d_inline_m">3</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Sed ut perspiciatis unde omnis iste</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="350">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_2.jpg" alt="" class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i> <span class="fs_small d_inline_m">77</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Donec sagittis euismod purus</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="500">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_3.jpg" alt="" class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i> <span class="fs_small d_inline_m">0</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Natus error sit voluptatem</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="650">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_4.jpg" alt="" class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i> <span class="fs_small d_inline_m">3</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Sed ut perspiciatis unde omnis iste</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="800">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_2.jpg" alt="" class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i> <span class="fs_small d_inline_m">77</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Donec sagittis euismod purus</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="950">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_3.jpg" alt="" class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i> <span class="fs_small d_inline_m">0</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Natus error sit voluptatem</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
+                                </figure>
+                            </article>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>

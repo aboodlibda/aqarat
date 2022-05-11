@@ -68,6 +68,9 @@
             </div>
         </div>
     </div> -->
+    @php
+    $categories = \App\Models\Category::all();
+    @endphp
     <header role="banner" class="w_inherit">
         <!--top part-->
         <div class="header_middle_part type_2 t_xs_align_c">
@@ -91,13 +94,12 @@
                     <ul class="main_menu hr_list d_inline_b d_xs_block t_sm_align_l relative second_font fs_medium t_align_l">
                         <li><a href="/" class="tt_uppercase tr_delay">الرئيسية</a></li>
                         <li>
-                            <a href="index.html" class="tt_uppercase tr_delay">الأقسام <i class="fa fa-caret-down tr_inherit d_inline_m m_left_5 m_md_left_2"></i></a>
+                            <a href="" class="tt_uppercase tr_delay">الأقسام <i class="fa fa-caret-down tr_inherit d_inline_m m_left_5 m_md_left_2"></i></a>
                             <!--sub menu (second level)-->
                             <ul class="sub_menu bg_grey_light tr_all">
-                                <li><a href="index_v4.html">العقارات</a></li>
-                                <li><a href="index_v3.html">المنازل</a></li>
-                                <li><a href="index.html">الأراضي</a></li>
-                                <li><a href="index_v2.html">Royal</a></li>
+                                @foreach($categories as $category)
+                                    <li><a href="/">{{$category->name}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
                         <li>
@@ -142,7 +144,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-12 col-md-12">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
                             <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">من نحن</h5>
@@ -157,49 +159,25 @@
                                     الحياة واستثمار الوقت ومواكبة التطوّر والتقنية وفقاَ لشعارنا : #عقاريتو_سهلنا_الصعب
 
                                 </p>
-                                <a href="#" class="sc_hover second_font">Read More</a>
+                                <a href="#" class="sc_hover second_font ">عرض المزيد</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
-                            <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">الخدمات</h5>
+                            <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">الأقسام</h5>
                             <hr class="divider_bg m_bottom_25">
                             <ul class="second_font vr_list_type_1 with_links">
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>My account</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Order history</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Wishlist</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Vendor contact</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Front page</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Categories</a></li>
+                                @foreach($categories as $category)
+                                    <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>{{$category->name}}</a></li>
+                                @endforeach
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
-                            <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">المعلومات</h5>
-                            <hr class="divider_bg m_bottom_25">
-                            <ul class="second_font vr_list_type_1 with_links">
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>About us</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>New collection</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Best sellers</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Manufacturers</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Privacy policy</a></li>
-                                <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Terms &amp; condition</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
-                            <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">تابعنا عبر الفايسبوك</h5>
-                            <hr class="divider_bg m_bottom_15">
-                            <div class="fb-page" data-href="https://www.facebook.com/kinokritik/" data-tabs="timeline" data-height="200px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kinokritik/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kinokritik/">Кинокритик</a></blockquote></div>
                         </div>
                     </div>
                 </div>
             </div>
             <hr class="divider_black m_bottom_13">
             <div class="d_table w_full d_xs_block t_xs_align_c">
-                <div class="col-lg-6 col-md-6 col-sm-6 color_light fw_light f_none d_table_cell v_align_m d_xs_block m_xs_bottom_10">
-                    &copy; 2014 <a href="index.html" class="sc_hover">منصة الشواهق</a>. جميع حقوق الطبع محفوظة.
+                <div class="col-lg-6 col-md-6 col-sm-6 color_light fw_light f_none d_table_cell v_align_m d_xs_block m_xs_bottom_10">. جميع حقوق الطبع محفوظة.
+                    <a href="/" class="sc_hover">منصة الشواهق</a> &copy; 2022
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c f_none d_table_cell v_align_m d_xs_block">
                     <ul class="hr_list d_inline_b">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\City;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -26,12 +27,8 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::all();
-        $products = Product::latest()->paginate(10);
-        $mobile = Product::where('category_id' ,'=' , 2)->get();
-        $laptop = Product::where('category_id' ,'=' , 4)->get();
-        $Ipad = Product::where('category_id' ,'=' , 3)->get();
-        $electronic = Product::where('category_id' ,'=' , 5)->get();
-        return view('home',compact('categories','products','mobile','laptop','Ipad','electronic'));
+        $cities = City::all();
+        return view('home',compact('categories','cities'));
     }
 
 
