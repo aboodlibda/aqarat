@@ -34,7 +34,7 @@
     <script src="{{asset('front/js/jquery-2.1.1.min.js')}}"></script>
     <script src="{{asset('front/js/modernizr.js')}}"></script>
 </head>
-<body class="sticky_menu">
+<body class="sticky_menu" style="font-family: 'Cairo', sans-serif">
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
