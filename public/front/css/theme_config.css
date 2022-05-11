@@ -2,9 +2,11 @@
 
 html{
 	overflow-x:hidden;
+    font-family: 'Cairo', sans-serif;
 }
 body{
 	font:400 14px/1.5em 'Cairo', sans-serif;
+    font-family: 'Cairo', sans-serif;
 	color:#595959;
 	background-attachment: fixed;
 }
