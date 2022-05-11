@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="font-family: 'Cairo', sans-serif">
+<html lang="ar" dir="rtl">
 <head>
     <title>منصة الشواهق العقارية</title>
     <meta charset="utf-8">
