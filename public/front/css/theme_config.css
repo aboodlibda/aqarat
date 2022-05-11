@@ -4,7 +4,7 @@ html{
 	overflow-x:hidden;
 }
 body{
-	font:400 14px/1.5em 'Lato', sans-serif;
+	font:400 14px/1.5em 'Cairo', sans-serif;
 	color:#595959;
 	background-attachment: fixed;
 }
@@ -21,7 +21,7 @@ body{
 table td[data-cell-title]::before,
 [class*="first_letter"]:first-letter,
 a{
-	font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 ::selection{
 	background:#11b1d9;
@@ -164,7 +164,7 @@ blockquote.type_2::after{
 	display: block;
 	text-align: center;
 	font-weight: 600;
-	font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Cairo', sans-serif;
 	margin: 10px 13px 0 0;
 }
 .first_letter_type_1 span{
@@ -199,7 +199,7 @@ blockquote.type_2::after{
 }
 .detect_scroll_width{
 	position:absolute;
-	top:-9999px;	
+	top:-9999px;
 	width:50px;
 	height:50px;
 	overflow:scroll;
@@ -223,13 +223,13 @@ a:not([class*="tr_"]){
 	-webkit-transition:color .75s ease, background-color .75s ease, border-color .75s ease;
 	-moz-transition:color .75s ease, background-color .75s ease, border-color .75s ease;
 	-o-transition:color .75s ease, background-color .75s ease, border-color .75s ease;
-	transition:color .75s ease, background-color .75s ease, border-color .75s ease;	
+	transition:color .75s ease, background-color .75s ease, border-color .75s ease;
 }
 .tr_delay:hover{
 	-webkit-transition:color .1s ease, background-color .1s ease, border-color .1s ease;
 	-moz-transition:color .1s ease, background-color .1s ease, border-color .1s ease;
 	-o-transition:color .1s ease, background-color .1s ease, border-color .1s ease;
-	transition:color .1s ease, background-color .1s ease, border-color .1s ease;	
+	transition:color .1s ease, background-color .1s ease, border-color .1s ease;
 }
 .tr_all{
 	-webkit-transition:all .4s ease;
@@ -241,7 +241,7 @@ a:not([class*="tr_"]){
 	-webkit-transition:inherit;
 	-moz-transition:inherit;
 	-o-transition:inherit;
-	transition:inherit	
+	transition:inherit
 }
 
 /* Typography */
@@ -258,7 +258,7 @@ h4,
 }
 h1,h2,h3,h4,h5,h6{
 	line-height: 1em;
-	font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 .fw_thin{
 	font-weight: 100;
@@ -267,7 +267,7 @@ h1,h2,h3,h4,h5,h6{
 	font-weight:400;
 }
 .fw_light{
-	font-weight: 300;	
+	font-weight: 300;
 }
 .fw_medium{
 	font-weight: 500;
@@ -397,7 +397,7 @@ table th,table td{
 	color:#fd860a;
 }
 .color_lbrown_h:hover{
-	color:#fd860a !important;	
+	color:#fd860a !important;
 }
 .bg_lbrown,
 .bg_lbrown_hover:hover,
@@ -441,7 +441,7 @@ a,
 .black_button_active,
 .black_hover:hover,
 .simple_slideshow .flex-direction-nav a:hover{
-	border-color:#222226 !important;	
+	border-color:#222226 !important;
 }
 .bg_color_dark,
 .divider_bg::before,
@@ -456,7 +456,7 @@ a,
 .black_button_active,
 .black_hover:hover,
 .simple_slideshow .flex-direction-nav a:hover{
-	background-color:#222226 !important;	
+	background-color:#222226 !important;
 }
 
 /* red */
