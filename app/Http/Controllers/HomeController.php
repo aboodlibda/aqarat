@@ -28,7 +28,8 @@ class HomeController extends Controller
     {
         $categories = Category::all();
         $cities = City::all();
-        return view('home',compact('categories','cities'));
+        $products = Product::all();
+        return view('home',compact('categories','cities','products'));
     }
 
 
