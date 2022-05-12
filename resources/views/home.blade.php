@@ -83,7 +83,7 @@
         <div class="container">
             <div class="d_table m_bottom_5 w_full animated hidden" data-animation="fadeInDown">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 v_align_m d_table_cell f_none">
-                    <h5 class="second_font color_dark tt_uppercase fw_light d_inline_m m_bottom_4">New</h5>
+                    <h5 class="second_font color_dark tt_uppercase fw_light d_inline_m m_bottom_4">أحدث العقارات</h5>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align_r d_table_cell f_none">
                     <!--carousel navigation-->
