@@ -120,8 +120,9 @@
                             <figure class="relative r_image_container c_image_container qv_container">
 
                                 <div class="d_block m_bottom_15 relative">
-                                    <img src="{{asset($product->images[0]->url)}}" alt="" class="c_image_1 tr_all">
-                                    <img src="{{asset($product->images[1]->url)}}" alt="" class="c_image_2 tr_all">
+{{--                                    <img src="{{asset($product->images[0]->url)}}" alt="" class="c_image_1 tr_all">--}}
+{{--                                    <img src="{{asset($product->images[1]->url)}}" alt="" class="c_image_2 tr_all">--}}
+                                    <img src="https://aqarito.fra1.digitaloceanspaces.com/uploads/images/92be08e1-47af-46f2-98b3-a0427f5e1c97-28042022.png" alt="" class="c_image_1 tr_all">
                                 </div>
                                 <figcaption class="t_align_c">
                                     <ul>
