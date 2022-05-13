@@ -102,7 +102,7 @@
                             </div>
                             <figcaption class="t_align_c">
                                 <ul>
-                                    <li><a href="#" class="second_font sc_hover">{{$product->name}}</a></li>
+                                    <li><a href="{{ route('products.show' , $product->id) }}" class="second_font sc_hover">{{$product->name}}</a></li>
                                     <li class="m_bottom_7"><a href="{{ route('cities.show' , $product->city->id) }}" class="color_light sc_hover fw_light d_inline">{{$product->city->name}}</a></li>
                                     <li class="m_bottom_16"><b class="fs_large second_font scheme_color">{{$product->price}} ريال </b></li>
                                 </ul>
@@ -165,7 +165,7 @@
                             </div>
                             <figcaption class="t_align_c">
                                 <ul>
-                                    <li><a href="#" class="second_font sc_hover">{{$product->name}}</a></li>
+                                    <li><a href="{{ route('products.show' , $product->id) }}" class="second_font sc_hover">{{$product->name}}</a></li>
                                     <li class="m_bottom_7"><a href="{{ route('cities.show' , $product->city->id) }}" class="color_light sc_hover fw_light d_inline">{{$product->city->name}}</a></li>
                                     <li class="m_bottom_16"><b class="fs_large second_font scheme_color">{{$product->price}} ريال </b></li>
                                 </ul>
