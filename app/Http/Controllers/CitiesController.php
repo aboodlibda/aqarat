@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class CitiesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('show');
+    }
+
+
     public function index()
     {
         $cities = City::latest()->paginate(15);

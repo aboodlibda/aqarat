@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('show');
+    }
+
     public function index()
     {
         $products = Product::latest()->paginate(10);

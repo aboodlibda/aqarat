@@ -28,12 +28,14 @@ Route::group( ['prefix' => 'dashboard/','middleware' => ['auth:web']] , function
 
     Route::get('',[DashboardController::class,'index'])->name('dashboard');
 
-    Route::resource('categories',CategoriesController::class);
-    Route::resource('products',ProductsController::class);
-    Route::resource('cities',CitiesController::class);
+
     Route::resource('settings',\App\Http\Controllers\ContactsController::class);
 
 });
+
+Route::resource('categories',CategoriesController::class);
+Route::resource('products',ProductsController::class);
+Route::resource('cities',CitiesController::class);
 
 Auth::routes([
     'register' => false, // Registration Routes...

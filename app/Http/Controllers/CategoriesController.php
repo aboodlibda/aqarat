@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
+        public function __construct()
+    {
+        $this->middleware('auth')->except('show');
+    }
+
+
+
     public function index()
     {
         $categories = Category::latest()->paginate(6);
