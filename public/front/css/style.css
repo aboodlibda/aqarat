@@ -2897,7 +2897,7 @@ input[type="checkbox"] + label::after,
 }
 
 .c_image_container .c_image_1{
-
+    object-fit: cover;height: 200px;width: 300px
 	position: relative;
 	z-index:1;
 
@@ -2909,7 +2909,7 @@ input[type="checkbox"] + label::after,
 	top:0;
 
 	left:0;
-
+    object-fit: cover;height: 200px;width: 300px
 	z-index:2;
 
 }
