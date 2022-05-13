@@ -46,7 +46,7 @@ class CitiesController extends Controller
 
     public function show(City $city)
     {
-        //
+        return view('dashboard.cities.show' , compact('city'));
     }
 
     public function edit(City $city)

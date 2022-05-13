@@ -398,6 +398,9 @@ table th,table td{
 [class*="button_type"].lbrown:not(.state_2):hover{
 	color:#fd860a;
 }
+.sq{
+    color: #32ff03;
+}
 .color_lbrown_h:hover{
 	color:#fd860a !important;
 }

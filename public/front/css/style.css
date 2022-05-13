@@ -1682,6 +1682,10 @@ table td{
 
 }
 
+.ff{
+    object-fit: cover;height: 300px;width: 400px
+}
+
 .caption_type_1{
 
 	position:absolute;
@@ -2895,7 +2899,6 @@ input[type="checkbox"] + label::after,
 .c_image_container .c_image_1{
 
 	position: relative;
-    object-fit: cover;height: 330px;width: 400px;
 	z-index:1;
 
 }
@@ -2903,7 +2906,6 @@ input[type="checkbox"] + label::after,
 .c_image_container .c_image_2{
 
 	position:absolute;
-    object-fit: cover;height: 330px;width: 400px;
 	top:0;
 
 	left:0;
@@ -2912,7 +2914,13 @@ input[type="checkbox"] + label::after,
 
 }
 
+.cc{
+    object-fit: cover;height: 170px;width: 400px
+}
 
+.abood{
+    object-fit: cover;height: 200px;width: 300px
+}
 
 /*isotope change layout*/
 

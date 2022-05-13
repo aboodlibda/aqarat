@@ -21,15 +21,29 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|min:3|max:20|unique:categories,name'
+            'name' => 'required|string|min:3|max:15|unique:categories',
+            'image' => 'required|max:5000'
         ]);
-        Category::create($request->all());
-        return redirect()->route('categories.create')->with('category-created','تم إنشاء القسم بنجاح');
+        $category = new Category();
+        $category->name = $request->get('name');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = $image->getClientOriginalName();
+            $request->image->move(public_path('categories-images/'), $imageName);
+            $category->image = ($imageName);
+        }
+        $isSave = $category->save();
+        if ($isSave){
+            return redirect()->route('categories.create')->with('category-created','test');
+        }
+        else{
+            return back();
+        }
     }
 
     public function show(Category $category)
     {
-        //
+        return view('dashboard.categories.show' , compact('category'));
     }
 
     public function edit(Category $category)
@@ -41,10 +55,27 @@ class CategoriesController extends Controller
     {
         $id = $category->id;
         $request->validate([
-            'name' => 'required|string|min:3|max:20|unique:categories,name,'.$id
+            'name' => 'required|string|min:3|max:15|unique:categories,name,'.$id,
+            'image' => 'max:5000'
+
         ]);
-        $category->update($request->all());
-        return redirect()->route('categories.index')->with('category-updated','test');
+
+        $category->update([
+            'name' => $request->name
+        ]);
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = $image->getClientOriginalName();
+            $request->image->move(public_path('categories-images/'), $imageName);
+            $category->image = ($imageName);
+        }
+        $isSave = $category->save();
+        if ($isSave){
+            return redirect()->route('categories.index')->with('category-updated','test');
+        }
+        else{
+            return back();
+        }
     }
 
     public function destroy(Request $request)

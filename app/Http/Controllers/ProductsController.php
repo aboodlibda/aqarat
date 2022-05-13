@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\City;
+use App\Models\Contact;
 use App\Models\Image;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -62,7 +63,8 @@ class ProductsController extends Controller
 
     public function show(Product $product)
     {
-//        return view('product',compact('product'));
+        $info = Contact::query()->first();
+        return view('dashboard.products.show',compact('product','info'));
     }
 
     public function edit(Product $product)

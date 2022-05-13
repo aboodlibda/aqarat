@@ -44,7 +44,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-<div id="preloader"></div>
+{{--<div id="preloader"></div>--}}
 <!--layout-->
 <div class="boxed_layout db_centered bg_white">
     <!--[if (lt IE 9) | IE 9]>
@@ -70,6 +70,7 @@
     </div> -->
     @php
     $categories = \App\Models\Category::all();
+    $cities = \App\Models\City::all();
     @endphp
     <header role="banner" class="w_inherit">
         <!--top part-->
@@ -98,7 +99,7 @@
                             <!--sub menu (second level)-->
                             <ul class="sub_menu bg_grey_light tr_all">
                                 @foreach($categories as $category)
-                                    <li><a href="/">{{$category->name}}</a></li>
+                                    <li><a href="{{ route('categories.show' , $category->id) }}">{{$category->name}}</a></li>
                                 @endforeach
                             </ul>
                         </li>
@@ -106,27 +107,19 @@
                             <a class="tt_uppercase tr_delay">المدن <i class="fa fa-caret-down tr_inherit d_inline_m m_left_5"></i></a>
                             <div class="mega_menu bg_grey_light tr_all">
                                 <div class="row">
-                                    <section class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_15">
-                                        <h6 class="color_dark m_bottom_13"><b class="second_font ">الرياض</b></h6>
-                                        <img src="{{asset('front/images/mega_menu_img_1.jpg')}}" alt="" class="m_bottom_3">
-                                    </section>
-                                    <section class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_15">
-                                        <h6 class="color_dark m_bottom_13"><b class="second_font ">جدة</b></h6>
-                                        <img src="{{asset('front/images/mega_menu_img_2.jpg')}}" alt="" class="m_bottom_3">
-                                    </section>
-                                    <section class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_15">
-                                        <h6 class="color_dark m_bottom_13"><b class="second_font ">أبها</b></h6>
-                                        <img src="{{asset('front/images/mega_menu_img_3.jpg')}}" alt="" class="m_bottom_3">
-                                    </section>
-                                    <section class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_15">
-                                        <h6 class="color_dark m_bottom_13"><b class="second_font ">مكة</b></h6>
-                                        <img src="{{asset('front/images/mega_menu_img_4.jpg')}}" alt="" class="m_bottom_3">
-                                    </section>
+                                    @foreach($cities as $city)
+                                        <a href="{{ route('cities.show' , $city->id) }}">
+                                            <section class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_15">
+                                                <h6 class="color_dark m_bottom_13"><b class="second_font ">{{$city->name}}</b></h6>
+                                                <img src="{{asset('cities-images/'.$city->image)}}" alt="" class="m_bottom_3" style="object-fit: cover;height: 100px;width: 400px">
+                                            </section>
+                                        </a>
+                                    @endforeach
                                 </div>
                             </div>
                         </li>
-                        <li><a href="contact.html" class="tt_uppercase tr_delay">من نحن</a></li>
-                        <li><a href="contact.html" class="tt_uppercase tr_delay">تواصل معنا</a></li>
+                        <li><a href="{{ route('about') }}" class="tt_uppercase tr_delay">من نحن</a></li>
+                        <li><a href="{{ route('contact') }}" class="tt_uppercase tr_delay">تواصل معنا</a></li>
                     </ul>
                 </nav>
             </div>
@@ -159,7 +152,6 @@
                                     الحياة واستثمار الوقت ومواكبة التطوّر والتقنية وفقاَ لشعارنا : #عقاريتو_سهلنا_الصعب
 
                                 </p>
-                                <a href="#" class="sc_hover second_font ">عرض المزيد</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
@@ -167,7 +159,7 @@
                             <hr class="divider_bg m_bottom_25">
                             <ul class="second_font vr_list_type_1 with_links">
                                 @foreach($categories as $category)
-                                    <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>{{$category->name}}</a></li>
+                                    <li class="m_bottom_14"><a href="{{ route('categories.show' , $category->id   ) }}" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>{{$category->name}}</a></li>
                                 @endforeach
                             </ul>
                         </div>

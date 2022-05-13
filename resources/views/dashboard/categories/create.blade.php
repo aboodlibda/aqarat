@@ -112,7 +112,7 @@
                                 <!--begin::Modal body-->
                                 <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                                     <!--begin:Form-->
-                                    <form id="kt_modal_new_target_form" class="form" method="POST" action="{{route('categories.store')}}">
+                                    <form id="kt_modal_new_target_form" class="form" method="POST" action="{{route('categories.store')}}" enctype="multipart/form-data">
                                     @csrf
                                     <!--begin::Heading-->
                                         <div class="mb-13 text-center">
@@ -124,9 +124,63 @@
                                                 <a href="{{route('categories.index')}}" class="fw-bolder link-primary">هنا</a>.</div>
                                             <!--end::Description-->
                                         </div>
+                                        <div class="row">
                                         <!--end::Heading-->
+                                        <div class="col-md-3 mb-10 " style="border:1px ">
+                                            <!--begin::Image input-->
+                                            <div class="image-input image-input-outline" data-kt-image-input="true"
+                                            >
+                                                <!--begin::Preview existing avatar-->
+                                                <div class="image-input-wrapper w-225px h-225px"
+                                                     style="background-image: url({{asset('assets/media/avatars/dummy.png')}})"></div>
+                                                <!--end::Preview existing avatar-->
+                                                <!--begin::Label-->
+                                                <label
+                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow"
+                                                    data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                                    title="تغيير الصورة">
+                                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                                    <!--begin::Inputs-->
+                                                    <input type="file" name="image" accept="image/*"/>
+                                                    <input type="hidden" name="avatar_remove"/>
+                                                    <!--end::Inputs-->
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Cancel-->
+                                                <span
+                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow"
+                                                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                                    title="حذف الصورة">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                <!--end::Cancel-->
+                                                <!--begin::Remove-->
+                                                {{--                                                   <span--}}
+                                                {{--                                                       class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow"--}}
+                                                {{--                                                       data-kt-image-input-action="remove" data-bs-toggle="tooltip"--}}
+                                                {{--                                                       title="حذف الصورة">--}}
+                                                {{--                                                                    <i class="bi bi-x fs-2"></i>--}}
+                                                {{--                                                                </span>--}}
+                                                <!--end::Remove-->
+                                            </div>
+                                            <!--end::Image input-->
+                                            <!--begin::Hint-->
+                                            <div class="form-text mb-10 ">
+                                                <span>الصيغة المسموح بها : jpg , jpeg , png</span><br>
+                                                <span>
+                                                        @error('image')
+                                                        <span class="text-danger">
+                                                            {{$message}}
+                                                        </span>
+                                                    @enderror
+                                                    </span>
+                                            </div>
+
+                                            <!--end::Hint-->
+                                        </div>
+
                                         <!--begin::Input group-->
-                                        <div class="d-flex flex-column mb-8 fv-row">
+                                        <div class="col-md-9 mb-10">
                                             <!--begin::Label-->
                                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                                 <span class="required">عنوان القسم</span>
@@ -141,7 +195,7 @@
                                             </span>
                                         </div>
                                         <!--end::Input group-->
-
+                                        </div>
                                         <!--begin::Actions-->
                                         <div class="text-center">
                                             <button type="reset" class="btn btn-white me-3">مسح البيانات</button>

@@ -265,7 +265,7 @@
                         </div>
 
                                         {{--                        اعدادات الموقع                      --}}
-                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                        <div  class="menu-item menu-accordion">
 
                                   	<span class="menu-link">
 										<span class="menu-icon">
@@ -278,7 +278,7 @@
 											</span>
                                             <!--end::Svg Icon-->
 										</span>
-										<a href="" class="menu-title"> اعدادات الموقع</a>
+										<a href="{{ route('settings.index') }}" class="menu-title"> اعدادات الموقع</a>
 									</span>
 
                         </div>

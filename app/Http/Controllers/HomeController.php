@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\City;
+use App\Models\Contact;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -26,20 +27,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $custom_categories = Category::query()->latest()->paginate(3);
         $cities = City::all();
-        $products = Product::all();
-        return view('home',compact('categories','cities','products'));
+        $products = Product::query()->latest()->take(15)->get();
+        $random_products = Product::query()->latest()->take(15)->get();
+        return view('home',compact('custom_categories','cities','products','random_products'));
     }
 
 
-    public function checkout(Product $product)
+    public function contact()
     {
-        return view('checkout',compact('product'));
+        $info = Contact::query()->first();
+        return view('contact' , compact('info'));
     }
 
-    public function payment()
+    public function about()
     {
-        return view('payment');
+        return view('about');
     }
 }

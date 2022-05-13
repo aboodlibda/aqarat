@@ -31,7 +31,7 @@ Route::group( ['prefix' => 'dashboard/','middleware' => ['auth:web']] , function
     Route::resource('categories',CategoriesController::class);
     Route::resource('products',ProductsController::class);
     Route::resource('cities',CitiesController::class);
-    Route::view('product','product');
+    Route::resource('settings',\App\Http\Controllers\ContactsController::class);
 
 });
 
@@ -42,5 +42,7 @@ Auth::routes([
 ]);
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('contact-us', [HomeController::class, 'contact'])->name('contact');
+Route::get('about-us', [HomeController::class, 'about'])->name('about');
 
 Route::view('app','layouts.app');
