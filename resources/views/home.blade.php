@@ -37,7 +37,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-4">
                         <!--banner-->
                         <figure class="relative wrapper scale_image_container m_bottom_30 r_image_container">
-                            <img src="{{asset('categories-images/'.$category->image)}}" alt="" class="tr_all scale_image ff">
+                            <img src="{{asset('categories-images/'.$category->image)}}" alt="" class="tr_all scale_image ff" style="object-fit: cover;height: 300px;width: 400px">
                             <!--caption-->
                             <figcaption class="caption_type_1 tr_all">
                                 <div class="caption_inner">
