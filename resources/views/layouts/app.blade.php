@@ -81,7 +81,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 d_table_cell t_align_c d_xs_block f_none v_align_m m_xs_bottom_15">
                         <!--logo-->
                         <a href="/" class="d_inline_b">
-{{--                            <img src="{{asset('front/images/logo.png')}}" alt="">--}}
+                            <img src="{{asset('front/images/logome.jpg')}}" alt="">
                         </a>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                             <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">من نحن</h5>
                             <hr class="divider_bg m_bottom_25">
                             <div class="clearfix">
-{{--                                <img src="{{asset('front/images/mini_logo.jpg')}}" class="f_left m_top_10 m_right_20" alt="">--}}
+                                <img src="{{asset('front/images/logome.jpg')}}" class="f_left m_top_10 m_right_20" alt="">
                                 <p class="m_bottom_14 fw_light">الشاهقات سوق عقاري متخصص في تقديم
                                     الخدمات العقارية .يتميز بمنصة على الإنترنت تتيح للمهتمين والمستخدمين شراء وبيع
                                     والبحث عن شققهم ومنازلهم المثالية، حيث تأسست في أواخر 2019 حيث قمنا باستقطاب
